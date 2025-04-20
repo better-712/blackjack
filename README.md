@@ -32,4 +32,35 @@ Each player's state observation is structured as a dictionary:
   "player_index": int          # The current player's index
 }
 ```
-**Action Space** 部分不在代码块内，它是正常的文本格式（并保持 Markdown 的格式），这样它在 GitHub 上显示时会更加清晰，且不再在代码块里。
+### 🎮 Action Space
+
+Available actions (discrete):
+
+- `0`: **Stand** – Stop drawing cards  
+- `1`: **Hit** – Draw one more card  
+
+_Potential future extensions:_
+- `2`: **Double Down**  
+- `3`: **Split**  
+
+---
+
+### 🔁 Transition Function
+
+- Player chooses **Hit** → draw a card → update hand value  
+- If hand value > 21 → bust → move to next player  
+- If **Stand** → directly move to next player  
+- After all players act, dealer draws until reaching 17 or more  
+- Game ends → reward is computed for each player  
+
+---
+
+### 🏆 Reward Function
+
+Reward is computed at the end of each game **per player**:
+
+| Outcome        | Reward |
+|----------------|--------|
+| Win            | `+1`   |
+| Draw / Push    | `0`    |
+| Loss / Bust    | `-1`   |
