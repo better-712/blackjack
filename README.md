@@ -23,7 +23,7 @@ This project aims to train a reinforcement learning agent to play Blackjack in a
 
 Each player's state observation is structured as a dictionary:
 
-```python
+python
 {
   "player_hand": [int],        # Sum of player's cards (or full card list)
   "dealer_visible": int,       # Dealer's visible card (1-10)
