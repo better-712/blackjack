@@ -31,5 +31,5 @@ Each player's state observation is structured as a dictionary:
   "dealer_visible": int,       # Dealer's visible card (1-10)
   "player_index": int          # The current player's index
 }
-
+```
 **Action Space** 部分不在代码块内，它是正常的文本格式（并保持 Markdown 的格式），这样它在 GitHub 上显示时会更加清晰，且不再在代码块里。
