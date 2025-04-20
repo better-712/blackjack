@@ -41,7 +41,7 @@ Available actions (discrete):
 
 ---
 
-### 🔁 Transition Function
+###  Transition Function
 
 - Player chooses **Hit** → draw a card → update hand value  
 - If hand value > 21 → bust → move to next player  
