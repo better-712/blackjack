@@ -58,5 +58,5 @@ Reward is computed at the end of each game **per player**:
 | Outcome        | Reward |
 |----------------|--------|
 | Win            | `+1`   |
-| Draw / Push    | `0`    |
-| Loss / Bust    | `-1`   |
+| Draw           | `0`    |
+| Loss           | `-1`   |
