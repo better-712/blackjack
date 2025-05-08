@@ -71,10 +71,10 @@ We used [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) to impl
 model = DQN("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=500_000, callback=callback)
 ```
-Environment: Single-player (against dealer, shared 6-deck shoe)
-Implementation: Gymnasium-compatible environment
-Deck behavior: Automatically reshuffled when fewer than 15 cards remain
-Dealer policy: Always hits until reaching 17 or more (standard rule)
+  Environment: Single-player (against dealer, shared 6-deck shoe)
+  Implementation: Gymnasium-compatible environment
+  Deck behavior: Automatically reshuffled when fewer than 15 cards remain
+  Dealer policy: Always hits until reaching 17 or more (standard rule)
 
 ## Evaluation Results
 
