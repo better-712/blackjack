@@ -72,7 +72,6 @@ model = DQN("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=500_000, callback=callback)
 ```
 Environment: Single-player (against dealer, shared 6-deck shoe). Although the environment supports multiple players, training was conducted with one learning agent and one fixed-strategy opponent to simplify training and focus on decision-making under uncertainty.
-
 Implementation: Gymnasium-compatible environment  
 Deck behavior: Automatically reshuffled when fewer than 15 cards remain  
 Dealer policy: Always hits until reaching 17 or more (standard rule)  
