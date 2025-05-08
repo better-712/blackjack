@@ -76,7 +76,7 @@ Implementation: Gymnasium-compatible environment
 
 ## Evaluation Results
 
-After training, the model was saved to disk as `dqn_blackjack_shareddeck.zip` and evaluated over **1,000 episodes**.
+After training, the model was saved to disk as `dqn_blackjack.zip` and evaluated over **1,000 episodes**.
 
 ### Performance Summary
 
@@ -85,3 +85,9 @@ After training, the model was saved to disk as `dqn_blackjack_shareddeck.zip` an
 | Wins    | 435   | 43.50%   |
 | Draws   | 101    | 1.01%    |
 | Losses  | 464   | 4640%   |
+
+| Strategy         | Wins | Draws | Losses | Win Rate |
+|------------------|------|-------|--------|----------|
+| **DQN Agent**     | 435  | 101    | 464    | 43.50%   |
+| **Baseline** (`Hit < 17`) | 412  | 116   | 472    | 41.20%   |
+| **Random Policy** | 276  | 41    | 683    | 27.60%   |
