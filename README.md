@@ -69,4 +69,19 @@ We used [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) to impl
 
 ```python
 model = DQN("MlpPolicy", env, verbose=1)
+model.learn(total_timesteps=500_000, callback=callback)
 ```
+Environment: Single-player (against dealer, shared 6-deck shoe)
+Implementation: Gymnasium-compatible environment
+
+## Evaluation Results
+
+After training, the model was saved to disk as `dqn_blackjack_shareddeck.zip` and evaluated over **1,000 episodes**.
+
+### Performance Summary
+
+| Outcome | Count | Rate     |
+|---------|-------|----------|
+| Wins    | 435   | 43.50%   |
+| Draws   | 101    | 1.01%    |
+| Losses  | 464   | 4640%   |
