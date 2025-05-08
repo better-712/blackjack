@@ -60,3 +60,13 @@ Reward is computed at the end of each game **per player**:
 | Win            | `+1`   |
 | Draw           | `0`    |
 | Loss           | `-1`   |
+
+## Algorithm: Deep Q-Network (DQN)
+
+We used [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) to implement a Deep Q-Network (DQN) agent for our Blackjack environment.
+
+### Training Configuration
+
+```python
+model = DQN("MlpPolicy", env, verbose=1)
+```
