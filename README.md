@@ -75,6 +75,7 @@ Environment: Single-player (against dealer, shared 6-deck shoe)
 Implementation: Gymnasium-compatible environment  
 Deck behavior: Automatically reshuffled when fewer than 15 cards remain  
 Dealer policy: Always hits until reaching 17 or more (standard rule)  
+Hardware: Trained on local CPU (MacBook Pro, ~10 minutes for 500k steps)
 
 ## Evaluation Results
 
@@ -87,3 +88,7 @@ After training, the model was saved to disk as `dqn_blackjack.zip` and evaluated
 | **DQN Agent**     | 435  | 101    | 464    | 43.50%   |
 | **Baseline** (`Hit < 17`) | 412  | 116   | 472    | 41.20%   |
 | **Random Policy** | 276  | 41    | 683    | 27.60%   |
+
+## Individual Contribution
+
+This project was completed independently by **Hao Geng**. 
