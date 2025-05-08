@@ -27,7 +27,7 @@ class BlackjackEnv(gym.Env):
         })
 
         self.action_space = spaces.Discrete(2)  # 0 = stand, 1 = hit
-        self._init_deck()  # 初始只洗一次牌堆
+        self._init_deck()  
 
     def _init_deck(self):
         single_deck = [1,2,3,4,5,6,7,8,9,10,10,10,10] * 4
@@ -35,7 +35,7 @@ class BlackjackEnv(gym.Env):
         random.shuffle(self.deck)
 
     def _draw_card(self):
-        if len(self.deck) < 15:  # 模拟洗牌鞋：牌堆剩太少时自动重洗
+        if len(self.deck) < 15:  
             self._init_deck()
         return self.deck.popleft()
 
@@ -93,7 +93,7 @@ class BlackjackEnv(gym.Env):
         if self.done:
             self._play_dealer()
             self._compute_rewards()
-            reward = self.rewards[0]  # 可改为返回所有人的 reward 向量
+            reward = self.rewards[0]  
             if self.render_mode == "human":
                 self.render()
             return self._dummy_obs(), reward, True, False, {}
