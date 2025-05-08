@@ -73,18 +73,14 @@ model.learn(total_timesteps=500_000, callback=callback)
 ```
 Environment: Single-player (against dealer, shared 6-deck shoe)
 Implementation: Gymnasium-compatible environment
+Deck behavior: Automatically reshuffled when fewer than 15 cards remain
+Dealer policy: Always hits until reaching 17 or more (standard rule)
 
 ## Evaluation Results
 
 After training, the model was saved to disk as `dqn_blackjack.zip` and evaluated over **1,000 episodes**.
 
 ### Performance Summary
-
-| Outcome | Count | Rate     |
-|---------|-------|----------|
-| Wins    | 435   | 43.50%   |
-| Draws   | 101    | 1.01%    |
-| Losses  | 464   | 4640%   |
 
 | Strategy         | Wins | Draws | Losses | Win Rate |
 |------------------|------|-------|--------|----------|
