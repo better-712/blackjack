@@ -89,6 +89,10 @@ After training, the model was saved to disk as `dqn_blackjack.zip` and evaluated
 | **Baseline** (`Hit < 17`) | 412  | 116   | 472    | 41.20%   |
 | **Random Policy** | 276  | 41    | 683    | 27.60%   |
 
+Although the winning rate of DQN agents is still not high compared to that of rule-based strategies. This is partly due to the basic rule of Blackjack: Players must act before the dealer. Therefore, players often bust before the dealer takes action, and the dealer only plays the cards when the players haven't lost their cards.
+
+Furthermore, Blackjack is a random and partially observable game. Even the optimal strategy can only achieve a winning rate of 44-46%. In this case, the approximately 43% win rate of the DQN agent represents a strong approximation of an effective strategy.
+
 ## Individual Contribution
 
 This project was completed independently by **Hao Geng**. 
